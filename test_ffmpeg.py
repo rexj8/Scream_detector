@@ -13,11 +13,12 @@ model = Model("model")
 rec = KaldiRecognizer(model, sample_rate)
 
 process = subprocess.Popen(['ffmpeg', '-loglevel', 'quiet', '-i',
-                            sys.argv[1],
+                            'clnsp1007.wav',
                             '-ar', str(sample_rate) , '-ac', '1', '-f', 's16le', '-'],
                             stdout=subprocess.PIPE)
 
 file=open("speech_text.txt", "w+")
+
 
 while True:
     data = process.stdout.read(4000)
@@ -26,11 +27,10 @@ while True:
     if rec.AcceptWaveform(data):
         pass
         print(rec.Result())
-        file.write(rec.Result() + " ")
+        # file.write(rec.Result() + " ")
     # else:
-        print(rec.PartialResult())
-        file.write(rec.PartialResult()+" ")
+        # print(rec.PartialResult())
+        # file.write(rec.PartialResult()+" ")
 
-print(rec.FinalResult())
+# print(rec.FinalResult())
 file.write(rec.FinalResult() + " ")
-
