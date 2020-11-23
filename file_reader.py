@@ -18,8 +18,3 @@ final_str=waste[16:-4]
 
 text_file = open('final_speech_to_text.txt', 'w+')
 text_file.write(final_str)
-# print(final_str)
-
-
-
-
