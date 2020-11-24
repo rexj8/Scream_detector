@@ -9,5 +9,7 @@ sub ='joint'
 file["Indexes"]= file["words"].str.find(sub)
 
 
+voice_text_file = open('final_speech_to_text.txt','r')
+# while()
 print(file)
 
