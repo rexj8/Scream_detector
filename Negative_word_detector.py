@@ -11,11 +11,12 @@ file["Indexes"]= file["words"].str.find(sub)
 
 voice_text_file = open('final_speech_to_text.txt','r')
 
-list_of_lists = [(line.strip()).split() for line in voice_text_file]
+file_string = [(line.strip()).split() for line in voice_text_file]
 
-i=len(list_of_lists[0])-1
+i=len(file_string[0])-1
 while i>=0:
 
 
+
+
 print(list_of_lists)
-# while()
