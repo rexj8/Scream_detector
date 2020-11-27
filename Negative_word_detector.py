@@ -15,4 +15,5 @@ while i>=0:
 
     i-=1
 
+print("critical index -> ")
 print(critical_index)
